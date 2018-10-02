@@ -13,9 +13,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <Button>
-            Learn React
-          </Button>
+          <Button>Learn React</Button>
         </header>
       </div>
     );
