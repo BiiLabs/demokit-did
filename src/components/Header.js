@@ -9,7 +9,8 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem,
+  NavLink
 } from 'reactstrap';
 
 export default class Example extends React.Component {
@@ -31,32 +32,34 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="light" light expand="md">
           <Link to="/" className="navbar-brand">
-            reactstrap
+            BiiLabs Demo kit - DID
           </Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <Link to="/" className="nav-link">
-                  Home
-                </Link>
-              </NavItem>
-              <NavItem>
-                <Link to="/about" className="nav-link">
-                  About
+                  Introduction
                 </Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  Use case
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Option 1</DropdownItem>
-                  <DropdownItem>Option 2</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Reset</DropdownItem>
+                  <DropdownItem>Certification</DropdownItem>
+                  <DropdownItem>Machine-to-machine</DropdownItem>
+                  <DropdownItem>Data Marketplace</DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+                <NavLink href="http://demokits.biilabs.io:8080">
+                  Cost comparison
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="https://github.com/tangleid/">GitHub</NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
